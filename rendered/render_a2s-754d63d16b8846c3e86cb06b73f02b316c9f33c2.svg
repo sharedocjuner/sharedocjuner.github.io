@@ -1,0 +1,71 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="289" height="208" version="1.1">
+    <defs>
+        <filter id="dsFilterNoBlur" width="150%" height="150%">
+            <feOffset dx="3" dy="3" in="SourceGraphic" result="offOut"/>
+            <feColorMatrix in="offOut" result="matrixOut" type="matrix" values="0.2 0 0 0 0 0 0.2 0 0 0 0 0 0.2 0 0 0 0 0 1 0"/>
+            <feBlend in="SourceGraphic" in2="matrixOut" mode="normal"/>
+        </filter>
+        <filter id="dsFilter" width="150%" height="150%">
+            <feOffset dx="3" dy="3" in="SourceGraphic" result="offOut"/>
+            <feColorMatrix in="offOut" result="matrixOut" type="matrix" values="0.2 0 0 0 0 0 0.2 0 0 0 0 0 0.2 0 0 0 0 0 1 0"/>
+            <feGaussianBlur in="matrixOut" result="blurOut" stdDeviation="3"/>
+            <feBlend in="SourceGraphic" in2="blurOut" mode="normal"/>
+        </filter>
+        <marker id="iPointer" fill="#000" markerHeight="7" markerUnits="strokeWidth" markerWidth="8" orient="auto" refX="5" refY="5" viewBox="0 0 10 10">
+            <path d="M10 0v10L0 5z"/>
+        </marker>
+        <marker id="Pointer" fill="#000" markerHeight="7" markerUnits="strokeWidth" markerWidth="8" orient="auto" refX="5" refY="5" viewBox="0 0 10 10">
+            <path d="M0 0l10 5-10 5z"/>
+        </marker>
+    </defs>
+    <g id="text" fill="#000" font-family="Consolas,Monaco,Anonymous Pro,Anonymous,Bitstream Sans Mono,monospace" font-size="15.2">
+        <text id="text0" x="-.9" y="28.8" fill="#000">
+            Node A Capacity
+        </text>
+        <text id="text1" x="-.9" y="44.8" fill="#000">
+            #-----------------------------#
+        </text>
+        <text id="text2" x="-.9" y="60.8" fill="#000">
+            |
+        </text>
+        <text id="text3" x="17.1" y="60.8" fill="#000">
+            kube-reserve |
+        </text>
+        <text id="text4" x="-.9" y="76.8" fill="#000">
+            #-----------------------------#
+        </text>
+        <text id="text5" x="-.9" y="92.8" fill="#000">
+            |
+        </text>
+        <text id="text6" x="17.1" y="92.8" fill="#000">
+            system-reserve |
+        </text>
+        <text id="text7" x="-.9" y="108.8" fill="#000">
+            #-----------------------------#
+        </text>
+        <text id="text8" x="-.9" y="124.8" fill="#000">
+            |
+        </text>
+        <text id="text9" x="17.1" y="124.8" fill="#000">
+            eviction-threshold |
+        </text>
+        <text id="text10" x="-.9" y="140.8" fill="#000">
+            #-----------------------------#
+        </text>
+        <text id="text11" x="-.9" y="156.8" fill="#000">
+            |
+        </text>
+        <text id="text12" x="17.1" y="156.8" fill="#000">
+            allocatable |
+        </text>
+        <text id="text13" x="-.9" y="172.8" fill="#000">
+            |
+        </text>
+        <text id="text14" x="17.1" y="172.8" fill="#000">
+            (available for pods) |
+        </text>
+        <text id="text15" x="-.9" y="188.8" fill="#000">
+            #-----------------------------#
+        </text>
+    </g>
+</svg>
